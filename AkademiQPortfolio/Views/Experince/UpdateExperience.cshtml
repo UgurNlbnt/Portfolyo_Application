@@ -1,4 +1,4 @@
-﻿
+﻿@model SkillTable 
 @{
     ViewData["Title"] = "UpdateExperience";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -10,17 +10,18 @@
     <label>
         Title
     </label>
-    <input type="text" class="form-control" name="ExperinceTitle" value="Uğur"></input>
+    <input type="text" class="form-control" name="ExperinceTitle" value="@Model.Title"></input>
 
     <label>
-        Derece
+        Level
     </label>
-    <input type="text" class="form-control" name="ExperinceLevel" value="95"></input>
+    <input type="text" class="form-control" name="Levels" value="@Model.Levels"></input>
 
-    <label>
-        Oluşturma Tarihi:
+    @* <label>
+        Test:
     </label>
-    <input type="text" class="form-control" name="ExperinceCreatedDate"></input>
+    <input type="text" class="form-control" name=""></input> *@
+
 
     <br></br>
 

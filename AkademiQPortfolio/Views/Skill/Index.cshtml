@@ -1,7 +1,8 @@
-﻿
+﻿@model List<SkillTable>
+
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Layout/Index.cshtml";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
 <h1>Burası yetenekler sayfası</h1>
@@ -22,12 +23,18 @@
 
         <tbody>
             <tr>
-                <td>1</td>
-                <td>C++</td>
-                <td>80</td>
-                <td>null</td>
-                <td><a href="/Skill/UpdateSkill" class="btn btn-success">Güncelle</a> </td>
-                <td> <a href="/Skill/DeleteSkill" class="btn btn-danger">Sil</a></td>
+                @foreach(var item in Model)
+                {
+                    <td>@item.SkillId</td>
+                    <td>@item.Title</td>
+                    <td>@item.Levels</td>
+                   @*  <td>@item.Test</td> *@
+                    <td><a href="/Skill/UpdateSkill/@item.SkillId" class="btn btn-success">Güncelle</a> </td>
+                    <td> <a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-danger">Sil</a></td>
+                }
+                
+                
+                
             </tr>
         <tbody>
     </table>
