@@ -1,6 +1,5 @@
 ﻿using AkademiQPortfolio.Data;
 using Microsoft.AspNetCore.Mvc;
-using OrnekDbContext;
 
 namespace AkademiQPortfolio.Controllers;
 
@@ -75,5 +74,20 @@ public class SkillController : Controller
         _portfolyodbContext.SaveChanges(); //4.adım
 
         return RedirectToAction("Index"); //5.adım
+    }
+
+    [HttpGet]
+    public IActionResult CreateSkill()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult CreateSkill(SkillTable skillTable)
+    {
+        _portfolyodbContext.SkillTables.Add(skillTable);
+        _portfolyodbContext.SaveChanges();
+
+        return RedirectToAction("Index");
     }
 }

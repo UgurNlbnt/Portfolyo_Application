@@ -21,7 +21,7 @@ public class ExperinceController : Controller
 
     public IActionResult DeleteExperience() 
     {
-        return View();
+        return RedirectToAction("Index");
     }
 
 }

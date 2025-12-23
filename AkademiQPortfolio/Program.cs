@@ -1,5 +1,6 @@
+using AkademiQPortfolio.Data;
 using Microsoft.EntityFrameworkCore;
-using OrnekDbContext;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

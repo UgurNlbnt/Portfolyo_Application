@@ -1,25 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Yetenekler (Skills)";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h1>Burası deneyimler sayfası</h1>
+<h1>Burası yetenekler (skills) sayfası</h1>
 
-<div class="container">
-    <table class="table table-bordered">
-
+<div class="container mt-4">
+    <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>ExperienceId</th>
+                <th>SkillId</th>
                 <th>Title</th>
                 <th>Level</th>
                 <th>Created Date</th>
                 <th>Güncelle</th>
                 <th>Sil</th>
             </tr>
-
         </thead>
-
 
         <tbody>
             <tr>
@@ -27,8 +24,22 @@
                 <td>C#</td>
                 <td>80</td>
                 <td>26.11.2025</td>
-                <td><a href="/Experience/UpdateExperience" class="btn btn-success">Güncelle</a> </td>
-                <td> <a href="/Experience/DeleteExperience" class="btn btn-danger">Sil</a></td>
+                <td>
+                    <a asp-controller="Skill"
+                       asp-action="UpdateSkill"
+                       asp-route-id="3"
+                       class="btn btn-success btn-sm">
+                        Güncelle
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="Skill"
+                       asp-action="DeleteSkill"
+                       asp-route-id="3"
+                       class="btn btn-danger btn-sm">
+                        Sil
+                    </a>
+                </td>
             </tr>
 
             <tr>
@@ -36,8 +47,22 @@
                 <td>C</td>
                 <td>70</td>
                 <td>26.11.2025</td>
-                <td><a href="/Experience/UpdateExperience" class="btn btn-success">Güncelle</a> </td>
-                <td> <a href="/Experience/DeleteExperience" class="btn btn-danger">Sil</a></td>
+                <td>
+                    <a asp-controller="Skill"
+                       asp-action="UpdateSkill"
+                       asp-route-id="4"
+                       class="btn btn-success btn-sm">
+                        Güncelle
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="Skill"
+                       asp-action="DeleteSkill"
+                       asp-route-id="4"
+                       class="btn btn-danger btn-sm">
+                        Sil
+                    </a>
+                </td>
             </tr>
 
             <tr>
@@ -45,13 +70,29 @@
                 <td>C++</td>
                 <td>50</td>
                 <td>26.11.2025</td>
-                <td><a href="/Experince/UpdateExperience" class="btn btn-success">Güncelle</a> </td>
-                <td><a href="/Experince/DeleteExperience" class="btn btn-danger">Sil</a></td>
+                <td>
+                    <a asp-controller="Skill"
+                       asp-action="UpdateSkill"
+                       asp-route-id="5"
+                       class="btn btn-success btn-sm">
+                        Güncelle
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="Skill"
+                       asp-action="DeleteSkill"
+                       asp-route-id="5"
+                       class="btn btn-danger btn-sm">
+                        Sil
+                    </a>
+                </td>
             </tr>
-
-
         </tbody>
     </table>
 
-    <a href="/Experince/CreateExperience" class="btn btn-secondary">Yeni Deneyim Ekle</a>
+    <a asp-controller="Skill"
+       asp-action="CreateSkill"
+       class="btn btn-secondary">
+        Yeni Skill Ekle
+    </a>
 </div>
