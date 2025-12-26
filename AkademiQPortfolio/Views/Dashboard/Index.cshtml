@@ -1,0 +1,249 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SaaS Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display transition-colors duration-200">
+    <div class="flex h-screen w-full overflow-hidden">
+        <!-- Side Navigation Bar -->
+        <aside class="w-64 flex-shrink-0 border-r border-[#e5e7eb] dark:border-slate-800 bg-white dark:bg-[#1A222C] flex flex-col justify-between overflow-y-auto hidden md:flex transition-colors duration-200">
+            <div class="flex flex-col gap-4 p-4">
+                <!-- Branding -->
+                <div class="flex gap-3 items-center px-2 py-1">
+                    <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 shadow-sm" data-alt="Abstract blue logo for admin panel" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCasigpujxFMbtkI9oS524BO1r3Z_a1rCuefx69nPsY9fwoFYLkQIny2mjOf5tbvCGb89_UBnfq1nf1WGx7Ne6uxP1Txwke5uxLrTaweBx-8XedpJ5-hyy02qt56js_FiSfa_XwzaWNymO4WZO2ahvLgEQzHaKAmtJsD2vvPvcA_Pekm9rSw-LAjV95e0Husdned_vu9l7--jgoL8hswyvlnO_Luy8XnIXQSb8JVCKWjF1UAJ0VDdZxAbVe8rv8KVST2IO0rhaztw");'></div>
+                    <div class="flex flex-col">
+                        <h1 class="text-[#111418] dark:text-white text-base font-bold leading-normal">Admin Panel</h1>
+                        <p class="text-[#617589] dark:text-slate-400 text-xs font-medium leading-normal">SaaS CMS</p>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <nav class="flex flex-col gap-2 mt-4">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-400 group transition-all" href="#">
+                        <span class="material-symbols-outlined text-[24px]" data-weight="fill">dashboard</span>
+                        <p class="text-sm font-bold leading-normal">Dashboard</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-slate-800 text-[#111418] dark:text-slate-300 transition-all" href="#">
+                        <span class="material-symbols-outlined text-[24px]">article</span>
+                        <p class="text-sm font-medium leading-normal">Content</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-slate-800 text-[#111418] dark:text-slate-300 transition-all" href="#">
+                        <span class="material-symbols-outlined text-[24px]">group</span>
+                        <p class="text-sm font-medium leading-normal">Users</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-slate-800 text-[#111418] dark:text-slate-300 transition-all" href="#">
+                        <span class="material-symbols-outlined text-[24px]">bar_chart</span>
+                        <p class="text-sm font-medium leading-normal">Analytics</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-slate-800 text-[#111418] dark:text-slate-300 transition-all" href="#">
+                        <span class="material-symbols-outlined text-[24px]">settings</span>
+                        <p class="text-sm font-medium leading-normal">Settings</p>
+                    </a>
+                </nav>
+            </div>
+            <!-- Bottom Actions -->
+            <div class="flex flex-col gap-1 p-4 border-t border-[#e5e7eb] dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] dark:hover:bg-slate-800 text-[#111418] dark:text-slate-300 transition-all" href="#">
+                    <span class="material-symbols-outlined text-[24px]">logout</span>
+                    <p class="text-sm font-medium leading-normal">Log Out</p>
+                </a>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark relative">
+            <!-- Top Mobile Header (visible only on mobile) -->
+            <header class="md:hidden flex items-center justify-between p-4 bg-white dark:bg-[#1A222C] border-b border-gray-200 dark:border-slate-800">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-gray-600 dark:text-gray-300">menu</span>
+                    <h1 class="font-bold text-lg text-gray-900 dark:text-white">Admin</h1>
+                </div>
+                <div class="size-8 rounded-full bg-gray-200 dark:bg-gray-700 bg-center bg-cover" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHf4aco2DQVMxgg3NY0C0IbBNyj_nw5nMXSEIae0pfvaLvwDGmUpXdvOKGTe8frmw_lQyhhUfIoJq1LfwzfZWY-GuiNWfGRQ2quXO2tUz9pQvfMVPVcZjuf3Wtd5T8rHCbgmb7fE7wFr_PudUvWdk0uidx-2VzFTuNMNWc3X5mN5Nj7XPf0p0-AoKIB88-ESThACVPCJzLgmBUhpteoz5I2sS_F0MHWiy6YAIZQf7TWrWk79IuvivrMlta0Qo71rFR0x5QzwMWYw");'></div>
+            </header>
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto p-4 md:p-8">
+                <div class="max-w-[1200px] mx-auto flex flex-col gap-8">
+                    <!-- Header Image / Welcome Banner -->
+                    <div class="relative w-full rounded-2xl overflow-hidden shadow-sm min-h-[180px] flex items-end">
+                        <!-- Background Image with Overlay -->
+                        <div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract blue digital wave background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDX4rr11Ud5EPGwo52R_qP7bfjAiz3t5RysJCwnYAaVXhqGk30InlmlAAu2nGsecc73NoDvMB9j3V1q4OLB6HWku18YO1gVdONhJ1S_BitIFGH0n-49VqyTsb928bRBUkHwUXUqQvjoAafa2Q0apfwSnFA_g2hVlg1qcXimJeKfRWY0869EpgRksJy6eCVvwLpcWC3oS6RyBhujqknEEeysLgW6tB0zB038Gdb7E9wOQw5YUtLPcY9-jfbonoxgGNcFmRPRp0hCdQ");'></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                        <!-- Content -->
+                        <div class="relative z-10 p-6 md:p-8 w-full flex justify-between items-end">
+                            <div>
+                                <h2 class="text-white text-3xl font-bold tracking-tight mb-2">Dashboard Overview</h2>
+                                <p class="text-gray-200 text-sm md:text-base font-medium opacity-90">Welcome back, Administrator. Here's what's happening today.</p>
+                            </div>
+                            <div class="hidden sm:block">
+                                <button class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-lg transition-colors flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                    New Report
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Statistics Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Card 1: Total Users (Blue) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">group</span>
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">@ViewBag.lastProjest</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">Son Eklenen Proje</p>
+                            </div>
+                        </div>
+                        <!-- Card 2: Active Sessions (Green) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">monitor_heart</span>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">@ViewBag.totalProjects</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">Toplam Servis Sayısı</p>
+                            </div>
+                        </div>
+                        <!-- Card 3: Revenue (Purple) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">payments</span>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">@ViewBag.firstProjest</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">İlk Eklenen Proje</p>
+                            </div>
+                        </div>
+                        <!-- Card 4: Blog Posts (Orange) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">article</span>
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">@ViewBag.FirstCategory</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">İlk Eklenen Kategori</p>
+                            </div>
+                        </div>
+                        <!-- Card 5: Media Library (Pink) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-pink-50 dark:bg-pink-900/20 rounded-lg text-pink-600 dark:text-pink-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">folder_open</span>
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">2.4 GB</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">Storage Used</p>
+                            </div>
+                        </div>
+                        <!-- Card 6: Pending Comments (Red) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">forum</span>
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">34</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">Comments Awaiting</p>
+                            </div>
+                        </div>
+                        <!-- Card 7: Support Tickets (Cyan) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-cyan-50 dark:bg-cyan-900/20 rounded-lg text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">support_agent</span>
+                                </div>
+                                <span class="px-2 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 text-xs font-bold rounded-full flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[14px]">check</span> Low
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">12</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">Open Support Tickets</p>
+                            </div>
+                        </div>
+                        <!-- Card 8: Server Uptime (Teal) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-teal-50 dark:bg-teal-900/20 rounded-lg text-teal-600 dark:text-teal-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">cloud_done</span>
+                                </div>
+                                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs font-bold rounded-full flex items-center gap-1">
+                                    30 Days
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">99.9%</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">Server Uptime Status</p>
+                            </div>
+                        </div>
+                        <!-- Card 9: Avg Session (Indigo) -->
+                        <div class="bg-white dark:bg-[#1A222C] p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-[28px]">schedule</span>
+                                </div>
+                                <span class="px-2 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 text-xs font-bold rounded-full flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[14px]">trending_up</span> 1%
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-[#111418] dark:text-white mb-1">4m 12s</h3>
+                                <p class="text-[#617589] dark:text-slate-400 text-sm font-medium">Avg. Session Duration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
